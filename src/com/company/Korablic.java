@@ -14,8 +14,8 @@ public class Korablic {
         long startTime = System.nanoTime();
 
         Configuration conf = new Configuration();
-        FileSystem hdfs = FileSystem.get(URI.create("hdfs://cdh631.itfbgroup.local:8020/user/usertest/AZ/Suc-user"), conf);
-        Path path = new Path("hdfs://cdh631.itfbgroup.local:8020/user/usertest/AZ/Suc-user");
+        FileSystem hdfs = FileSystem.get(URI.create("hdfs://cdh631.itfbgroup.local:8020/user/usertest/AZ/cry"), conf);
+        Path path = new Path("hdfs://cdh631.itfbgroup.local:8020/user/usertest/AZ/cry");
         if (hdfs.exists(path)){
             hdfs.delete(path,true);
         }
@@ -45,7 +45,7 @@ public class Korablic {
                 .write()
                 .format("csv")
                 .option("header",true)
-                .save("hdfs://cdh631.itfbgroup.local:8020/user/usertest/AZ/Suc-user");
+                .save("hdfs://cdh631.itfbgroup.local:8020/user/usertest/AZ/cry");
 
         sparkSession.stop();
         long endTime   = System.nanoTime();
